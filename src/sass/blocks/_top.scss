@@ -1,0 +1,10 @@
+.top {
+    padding: 6px 0;
+    background-color: #fff;
+    &__text {
+        font-size: 24px;
+        line-height: 28px;
+        font-family: 'Roboto-bold', sans-serif;
+        text-align: center;
+    }
+}

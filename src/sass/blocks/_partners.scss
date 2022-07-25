@@ -1,0 +1,17 @@
+.partners {
+    padding-top: 120px;
+    background-color: #f5f5f5;
+    &__title {
+        margin-bottom: 60px;
+        span {
+            display: inline-block;
+        }
+    }
+    &__inner {
+        width: 1354px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}

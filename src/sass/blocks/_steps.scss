@@ -1,0 +1,64 @@
+.steps {
+    position: relative;
+    z-index: 2;
+    padding-top: 120px;
+    background-color: #f5f5f5;
+    &__title {
+        margin-bottom: 46px;
+    }
+    &__items {
+        width: 1190px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__item {
+        position: relative;
+        background-color: #fff;
+        width: 283px;
+        padding: 17px 26px 15px 20px;
+    }
+    &__item-title--color {
+        font-family: 'Roboto Black', sans-serif;
+        font-size: 55px;
+        line-height: 64px;
+        color: #FC4639;
+    }
+    &__item-title {
+        font-family: 'Roboto Bold', sans-serif;
+        font-size: 36px;
+        line-height: 42px;
+        color: #000;
+        margin-bottom: 9px;
+    }
+    &__item-subtitle {
+        font-family: 'Roboto Bold', sans-serif;
+        font-size: 20px;
+        line-height: 24px;
+        color: #FC4639;
+        margin-bottom: 10px;
+    }
+    &__item-descr {
+        font-size: 18px;
+        line-height: 22px;
+        color: #000;
+    }
+    &__item-image--one {
+        position: absolute;
+        top: 0;
+        left: -100px;
+        z-index: -1;
+    }
+    &__item-image--two {
+        position: absolute;
+        top: 0;
+        left: -80px;
+        z-index: -1;
+    }
+    &__item-image--three {
+        position: absolute;
+        top: 0;
+        left: -80px;
+        z-index: -1;
+    }
+}

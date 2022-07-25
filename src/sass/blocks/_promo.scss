@@ -1,0 +1,64 @@
+.promo {
+    padding-top: 180px;
+    &__content {
+        max-width: 721px;
+        width: 100%;
+        margin-bottom: 100px;
+    }
+    &__title {
+        font-size: 51px;
+        line-height: 61px;
+        font-weight: 700;
+        color: #fff;
+        width: 100%;
+        margin-bottom: 20px;
+        &--bold {
+            display: block;
+            font-weight: 900;
+            font-size: 51px;
+        }
+    }
+    &__subtitle {
+        font-size: 34px;
+        line-height: 40px;
+        color: #FFFFFF;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+    &__button {
+        width: 263px;
+        height: 60px;
+    }
+    &__items {
+        display: flex;
+    }
+    &__item {
+        max-width: 315px;
+    }
+    &__item-title {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 28px;
+        color: #fff;
+        margin-right: 0;
+        margin-bottom: 10px;
+        padding-left: 40px;
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            background: url('../icons/promo/promo-icon-ok.svg') center no-repeat;
+        }
+    }
+    &__item-descr {
+        font-size: 18px;
+        line-height: 22px;
+        color: #fff;
+        padding-left: 40px;
+    }
+}

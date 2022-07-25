@@ -1,0 +1,27 @@
+.header {
+    position: relative;
+    z-index: 3;
+    padding-top: 11px;
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__menu {
+        display: flex;
+    }
+    &__menu-item {
+        font-family: 'Roboto Bold', sans-serif;
+        font-size: 24px;
+        line-height: 28px;
+        color: #fff;
+        margin-right: 35px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    &__button {
+        width: 283px;
+        height: 60px;
+    }
+}

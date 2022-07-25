@@ -1,0 +1,119 @@
+.quiz {
+    padding-top: 120px;
+    background-color: #f5f5f5;
+    &__card {
+        width: 1496px;
+        padding: 48px 0 52px 157px;
+        background: #fff url('../img/quiz/quiz-bg.png') no-repeat;
+        background-size: contain;
+        background-position: top left;
+        box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.5);
+        margin: 0 auto;
+        min-height: 600px;
+    }
+    &__card-inner {
+        display: flex;
+        align-items: center;
+    }
+    &__card-right {
+        width: 626px;
+        margin-left: 138px;
+    }
+    &__card-title {
+        font-size: 48px;
+        line-height: 57px;
+        font-family: 'Roboto Black', sans-serif;
+        color: #FC4639;
+        margin-bottom: 10px;
+    }
+    &__card-descr {
+        font-size: 24px;
+        line-height: 29px;
+        font-family: 'Roboto Bold', sans-serif;
+        color: #0F2844;
+        margin-bottom: 35px;
+        &--last {
+            font-size: 36px;
+            line-height: 43px;
+            font-family: 'Roboto Bold', sans-serif;
+            color: #0F2844;
+            margin-bottom: 35px;
+        }
+    }
+    &__card-subtitle {
+        font-size: 36px;
+        line-height: 43px;
+        font-family: 'Roboto Bold', sans-serif;
+        margin-bottom: 25px;
+    }
+    &__card-description {
+        font-size: 18px;
+        line-height: 22px;
+        margin-bottom: 10px;
+    }
+    &__box {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 303px);
+        grid-gap: 20px;
+        max-width: 740px;
+        margin-bottom: 20px;
+    }
+    &__radio {
+        display: none;
+        &:checked + .quiz__label__text {
+            background: rgba(#0F2844, .7);
+            color: #fff;
+        }
+    }
+    &__input-group {
+        width: 303px;
+        height: 60px;
+    }
+    &__label {
+        display: block;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        &__text {
+            width: 100%;
+            height: 100%;
+            background: #FFFFFF;
+            box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15);
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            font-size: 18px;
+            line-height: 22px;
+        }
+    }
+    &__input {
+        width: 303px;
+        height: 60px;
+        background-color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border: 1px solid rgba(#0F2844, .5);
+        font-size: 18px;
+        line-height: 22px;
+        &::placeholder {
+            color: rgba(#000, .5)
+        }
+    }
+    &__card-button {
+        width: 303px;
+        height: 60px;
+    }
+    &__card-button--prev,
+    &__card-button--next {
+        width: 200px;
+        height: 60px;
+    }
+    &__card-button--prev {
+        border: none;
+        font-size: 24px;
+        line-height: 29px;
+        cursor: pointer;
+        color: rgba(#000, .4);
+        margin-right: 10px;
+    }
+}

@@ -1,0 +1,40 @@
+.footer {
+    padding-top: 40px;
+    padding-bottom: 58px;
+    background-color: #000;
+    color: #fff;
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__menu {
+        display: flex;
+        margin-bottom: 60px;
+    }
+    &__menu-item {
+        font-family: 'Roboto Bold', sans-serif;
+        font-size: 24px;
+        line-height: 29px;
+        margin-right: 35px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    &__copy {
+        text-align: center;
+        margin: 0 auto;
+    }
+    &__worktime {
+        font-family: 'Roboto Bold', sans-serif;
+        font-size: 36px;
+        line-height: 42px;
+    }
+    &__worktime-chart {
+        display: block;
+        font-family: 'Roboto Bold', sans-serif;
+        font-size: 36px;
+        line-height: 42px;
+        margin-bottom: 25px;
+    }
+}
