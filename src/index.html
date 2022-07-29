@@ -25,30 +25,42 @@
                         <source srcset="./img/header/header-logo-mobile.png" media="(max-width: 576px)">
                         <img src="./img/header/header-logo.png" alt="header-logo">
                     </picture>
-                    <nav class="header__nav">
+               
                         <ul class="header__menu">
                             <li class="header__menu-item">
-                                <a class="header__menu-link" href="#">Преимущества</a>
+                                <a class="header__menu-link" href="#advantages">Преимущества</a>
                             </li>
                             <li class="header__menu-item">
-                                <a class="header__menu-link" href="#">Условия</a>
+                                <a class="header__menu-link" href="#arrange">Условия</a>
                             </li>
                             <li class="header__menu-item">
-                                <a class="header__menu-link" href="#">О компании</a>
+                                <a class="header__menu-link" href="#about">О компании</a>
                             </li>
                             <li class="header__menu-item">
-                                <a class="header__menu-link" href="#">Как получить</a>
+                                <a class="header__menu-link" href="#steps">Как получить</a>
                             </li>
                             <li class="header__menu-item">
-                                <a class="header__menu-link" href="#">FAQ</a>
+                                <a class="header__menu-link" href="#questions">FAQ</a>
                             </li>
                             <li class="header__menu-item">
-                                <a class="header__menu-link" href="#">Отзывы</a>
+                                <a class="header__menu-link" href="#reviews">Отзывы</a>
                             </li>
                         </ul>
-                    </nav>
-                    <button class="button header__button">Позвоните мне</button>
+                   
+                    <div class="header__mobile-inner">
+                        <button class="button header__button">Позвоните мне</button>
+                        <div class="humburger">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
                 </div>
+            </div>
+            <div class="header__top-mobile">
+                <p class="header__top-descr">
+                    Помощь в получении кредита
+                </p>
             </div>
         </header>
         <section class="promo">
@@ -63,6 +75,7 @@
                         Даже с испорченной кредитной историей
                         без поручителей и справок о доходах.
                     </p>
+                    <img src="./img/main/main-man-mobile.png" alt="man-mobile" class="promo__image-mobile">
                     <button class="button promo__button">Подать заявку</button>
                 </div>
                 <div class="promo__items">
@@ -93,7 +106,7 @@
     </section>
     <!-- ./main -->
 
-    <div class="advantages">
+    <div id="advantages" class="advantages">
         <div class="container">
             <div class="advantages__items">
                 <div class="advantages__item">
@@ -175,7 +188,7 @@
                         </div>
                         <div class="calc__inner-rate">
                             <div class="calc__proposal-inner-descr">
-                                Ежемесячный платеж
+                                Процентная ставка
                             </div>
                             <div class="calc__proposal-inner-percent">
                                 6,5%
@@ -197,7 +210,7 @@
     </section>
     <!-- ./calc -->
 
-    <section class="arrange">
+    <section id="arrange" class="arrange">
         <div class="container">
             <h2 class="title arrange__title">
                 <span class="title title-color">Оформим кредит</span>
@@ -354,7 +367,7 @@
     </section>
     <!-- ./money -->
 
-    <section class="about">
+    <section id="about" class="about">
         <img class="about__bg" src="./img/about/about-bg.png" alt="about-bg">
         <div class="container">
             <h2 class="title about__title">
@@ -389,7 +402,7 @@
     </section>
     <!-- ./help -->
 
-    <section class="steps">
+    <section id="steps" class="steps">
         <div class="container">
             <h2 class="title steps__title">
                 <span class="title title-color">Просто</span>
@@ -409,6 +422,7 @@
                 </div>
                 <div class="steps__item steps__item--two">
                     <img class="steps__item-image--two" src="./img/steps/steps-image-two.png" alt="steps-image-two">
+                    <img src="./img/steps/steps-mobile-two.png" alt="mobile-two" class="steps__image-mobile--two">
                     <div class="steps__item-title">
                         <span class="steps__item-title--color">2</span>
                         шаг
@@ -440,6 +454,7 @@
             <div class="quiz__card">
                 <div class="quiz__card-inner">
                     <img src="./img/quiz/quiz-card-image.png" alt="quiz-card-image" class="quiz__card-image">
+                    <img src="./img/quiz/quiz-image-mobile.png" alt="image-mobile" class="quiz__card-image-mobile">
                     <div class="quiz__card-right">
                         <h3 class="quiz__card-title">Узнать ставку сейчас</h3>
                         <p class="quiz__card-descr">
@@ -479,6 +494,7 @@
             <div class="quiz__card" style="display: none;">
                 <div class="quiz__card-inner">
                     <img src="./img/quiz/quiz-card-image.png" alt="quiz-card-image" class="quiz__card-image">
+                    <img src="./img/quiz/quiz-image-mobile.png" alt="image-mobile" class="quiz__card-image-mobile">
                     <div class="quiz__card-right">
                         <h3 class="quiz__card-title">Узнать ставку сейчас</h3>
                         <p class="quiz__card-descr">
@@ -526,6 +542,7 @@
             <div class="quiz__card" style="display: none;">
                 <div class="quiz__card-inner">
                     <img src="./img/quiz/quiz-card-image.png" alt="quiz-card-image" class="quiz__card-image">
+                    <img src="./img/quiz/quiz-image-mobile.png" alt="image-mobile" class="quiz__card-image-mobile">
                     <div class="quiz__card-right">
                         <h3 class="quiz__card-title">Предварительно одобрен</h3>
                         <p class="quiz__card-descr--last">
@@ -550,6 +567,7 @@
                                 <input type="number" class="quiz__input" placeholder="Ваш телефон">
                             </div>
                         </div>
+                        <button class="button quiz__card-button">Отправить</button>
                     </div>
                 </div>
             </div>
@@ -613,7 +631,7 @@
     </section>
     <!-- ./benefit -->
 
-    <section class="questions">
+    <section id="questions" class="questions">
         <img class="questions__image-left" src="./img/questions/questions-image-left.png" alt="questions__image-left">
         <img class="questions__image-right" src="./img/questions/questions-image-right.png" alt="questions__image-right">
         <div class="container">
@@ -676,7 +694,33 @@
     </section>
     <!-- ./partners -->
 
-    <section class="reviews">
+    <div class="wrapper">
+        <div class="container partners-slider swiper">
+            <h2 class="title partners__title">
+                <span class="title title-color">Банки</span> партнеры
+            </h2>
+            <div class="promo-slider__wrapper swiper-wrapper">
+                <div class="partners-slider__slide swiper-slide">
+                    <img src="./img/partners/1.png" alt="1">
+                </div>
+                <div class="partners-slider__slide swiper-slide">
+                    <img src="./img/partners/2.png" alt="1">
+                </div>
+                <div class="partners-slider__slide swiper-slide">
+                    <img src="./img/partners/3.png" alt="1">
+                </div>
+                <div class="partners-slider__slide swiper-slide">
+                    <img src="./img/partners/4.png" alt="1">
+                </div>
+                <div class="partners-slider__slide swiper-slide">
+                    <img src="./img/partners/5.png" alt="1">
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+
+    <section id="reviews" class="reviews">
         <div class="container">
             <h2 class="title reviews__title">
                 <span class="title title-color">Отзывы</span>
@@ -782,6 +826,7 @@
                 Деятельность осуществляется на основе Генеральных лицензий на осуществление банковских операций: №2766 от 27.11.2014г, №1326 
                 от 16.01.2015г, №2564 от 11.02.2015г, №1481 от 11.08.2015г, №2673 от 24.03.2015г, №2306 от 11.07.2013г
             </p>
+            <img src="./img/conditions/conditions-image.png" alt="conditions-image-mobile" class="conditions__image-mobile">
         </div>
     </section>
     <!-- ./conditions -->
@@ -825,6 +870,33 @@
     </footer>
     <!-- ./footer -->
 
+    <div class="modal modal-main">
+        <form action="#" class="modal-main__dialog">
+            <img src="./icons/modal/close.png" alt="close" class="modal-main__close">
+            <h3 class="modal-main__title">Обратный звонок</h3>
+            <div class="modal-main__input-group">
+                <input type="text" placeholder="Имя" class="modal-main__input">
+            </div>
+            <div class="modal-main__input-group">
+                <input type="tel" placeholder="+7 (___) ___ - __ - __" class="modal-main__input">
+            </div>
+            <button class="button modal-main__button">Отправить</button>
+        </form>
+    </div>
+    <!-- ./modal-main -->
+
+    <div class="modal modal-thanks">
+        <div class="modal-thanks__dialog">
+            <img src="./icons/modal/close.png" alt="close" class="modal-thanks__close">
+            <img src="./icons/modal/ok.png" alt="ok" class="modal-thanks__img">
+            <p class="modal-thanks__title">Заявка отправлена</p>
+            <p class="modal-thanks__text">Мы получили вашу заявку. <br> Наш юрист свяжется с вами</p>
+        </div>
+    </div>
+    <!-- ./modal-thanks -->
+
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>

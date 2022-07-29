@@ -35,6 +35,9 @@
         color: #0F2844;
         padding: 21px 0;
         cursor: pointer;
+        &--active {
+            background-color: transparent;
+        }
     }
     &__question-icon {
         position: absolute;

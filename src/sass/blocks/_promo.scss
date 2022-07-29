@@ -1,5 +1,6 @@
 .promo {
     padding-top: 180px;
+    padding-bottom: 85px;
     &__content {
         max-width: 721px;
         width: 100%;
@@ -14,7 +15,7 @@
         margin-bottom: 20px;
         &--bold {
             display: block;
-            font-weight: 900;
+            font-family: 'Roboto Black', sans-serif;
             font-size: 51px;
         }
     }
@@ -24,6 +25,9 @@
         color: #FFFFFF;
         font-weight: 700;
         margin-bottom: 20px;
+    }
+    &__image-mobile {
+        display: none;
     }
     &__button {
         width: 263px;

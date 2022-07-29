@@ -1,14 +1,19 @@
 .header {
     position: relative;
-    z-index: 3;
+    z-index: 1300;
     padding-top: 11px;
     &__inner {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        .humburger {
+            display: none;
+        }
     }
     &__menu {
         display: flex;
+        position: relative;
+        z-index: 1003;
     }
     &__menu-item {
         font-family: 'Roboto Bold', sans-serif;
@@ -23,5 +28,15 @@
     &__button {
         width: 283px;
         height: 60px;
+    }
+    &__top-mobile {
+        display: none;
+        background-color: #fff;
+    }
+    &__top-descr {
+        text-align: center;
+        font-size: 14px;
+        line-height: 16px;
+        font-family: 'Roboto Bold', sans-serif;
     }
 }
