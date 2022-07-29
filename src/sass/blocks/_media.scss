@@ -1413,7 +1413,11 @@
         text-align: center;
         margin: 0 auto;
     }
+    .partners__title {
+        margin-bottom: 25px;
+    }
     .wrapper {
+        display: block;
         padding-top: 60px;
         background-color: #f5f5f5;
     }
@@ -1431,6 +1435,13 @@
         &__logo {
             img {
                 width: 118px;
+            }
+        }
+        &__menu-item {
+            font-size: 16px;
+            line-height: 19px;
+            &:hover {
+                text-decoration: underline;
             }
         }
     }
@@ -1812,6 +1823,10 @@
             padding: 15px 0;
             font-size: 16px;
             line-height: 19px;
+        }
+        &__question-content {
+            font-size: 14px;
+            line-height: 17px;
         }
     }
     .partners {
