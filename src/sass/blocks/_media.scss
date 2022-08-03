@@ -1,6 +1,7 @@
 @media (max-width: 1850px) {
     .container {
-        width: 1700px;
+        max-width: 1700px;
+        width: 100%;
     }
     .questions {
         &__image-left,
@@ -21,7 +22,8 @@
 }
 @media (max-width: 1750px) {
     .container {
-        width: 1600px;
+        max-width: 1600px;
+        width: 100%;
     }
     .main {
         background-size: cover;
@@ -81,6 +83,7 @@
 }
 @media(max-width: 1650px) {
     .container {
+        max-width: 100%;
         width: 1500px;
     }
     .main {
@@ -129,7 +132,8 @@
 }
 @media (max-width: 1600px) {
     .container {
-        width: 1400px;
+        max-width: 1400px;
+        width: 100%;
     }
     .header {
         &__logo {
@@ -239,7 +243,8 @@
 }
 @media (max-width: 1500px) {
     .container {
-        width: 1340px;
+        max-width: 1340px;
+        width: 100%;
     }
     .header {
         &__button {
@@ -312,11 +317,6 @@
             width: 625px;
         }
     }
-    .steps {
-        &__items {
-            width: 1140px;
-        }
-    }
     .quiz {
         padding-top: 110px;
         &__card {
@@ -363,7 +363,8 @@
 }
 @media (max-width: 1400px) {
     .container {
-        width: 1280px;
+        max-width: 1280px;
+        width: 100%;
     }
     .header {
         &__logo {
@@ -453,9 +454,6 @@
     }
     .steps {
         padding-top: 100px;
-        &__items {
-            width: 1050px;
-        }
     }
     .quiz {
         &__card {
@@ -521,7 +519,8 @@
 }
 @media (max-width: 1300px) {
     .container {
-        width: 1180px;
+        max-width: 1180px;
+        width: 100%;
     }
     .header {
         &__menu {
@@ -615,7 +614,8 @@
     }
     .main {
         &__man-image {
-            width: 410px;
+            width: 365px;
+            top: 328px;
         }
     }
     .advantages {
@@ -677,11 +677,7 @@
     .steps {
         padding-top: 95px;
         &__items {
-            width: 990px;
-        }
-        &__item {
-            width: 250px;
-            padding: 17px 15px 15px 20px;
+            width: 1180px;
         }
         &__item-descr {
             font-size: 17px;
@@ -764,7 +760,8 @@
 }
 @media(max-width: 1199px) {
     .container {
-        width: 960px;
+        max-width: 960px;
+        width: 100%;
     }
     .header {
         &__button {
@@ -789,7 +786,7 @@
     }
     .main {
         &__man-image {
-            top: 303px;
+            top: 355px;
         }
     }
     .advantages {
@@ -872,9 +869,6 @@
             justify-content: center;
             flex-wrap: wrap;
         }
-        &__item {
-            width: 33%;
-        }
     }
     .quiz {
         padding-top: 85px;
@@ -895,7 +889,7 @@
             display: block;
             position: absolute;
             top: -70px;
-            right: -15px;
+            right: -7px;
         }
     }
     .benefit {
@@ -972,11 +966,12 @@
 }
 @media (max-width: 991px) {
     .container {
-        width: 750px;
+        max-width: 750px;
+        width: 100%;
     }
     .main {
-        background-size: contain;
-        background-position: top 72px right;
+        background: none;
+        background: #000 url('../img/main/main-bg-medium.png') no-repeat top right;
         &__man-image {
             display: none;
             top: 196px;
@@ -984,13 +979,19 @@
         }
     }
     .promo {
-        padding-top: 55px;
+        padding-top: 45px;
         &__title {
             font-size: 32px;
             line-height: 48px;
         }
         &__title--bold {
             font-size: 34px;
+        }
+        &__subtitle {
+            margin-bottom: 45px;
+        }
+        &__content {
+            margin-bottom: 45px;
         }
     }
     .advantages {
@@ -1048,9 +1049,6 @@
         &__items {
             width: 750px;
         }
-        &__item {
-            width: 32%;
-        }
     }
     .quiz {
         padding-top: 75px;
@@ -1062,6 +1060,9 @@
         }
         &__card-right {
             margin-left: 0;
+        }
+        &__card-image-mobile {
+            right: 0;
         }
     }
     .benefit {
@@ -1110,11 +1111,12 @@
         }
         &__image-mobile {
             display: block;
-            width: 495px;
+            width: 340px;
             margin: 0 auto;
         }
         &__descr {
-            width: 100%;
+            width: 75%;
+            margin: 0 auto;
         }
     }
     .footer {
@@ -1171,7 +1173,8 @@
 }
 @media(max-width: 767px) {
     .container {
-        width: 540px;
+        max-width: 540px;
+        width: 100%;
     }
     .main {
         &__man-image {
@@ -1179,15 +1182,19 @@
         }
     }
     .promo {
-        // text-align: center;
         &__title {
             font-size: 28px;
             line-height: 42px;
+            text-align: center;
         }
         &__subtitle {
             font-size: 22px;
             line-height: 32px;
             margin-bottom: 0;
+            text-align: center;
+        }
+        &__items {
+            justify-content: center;
         }
         &__item {
             margin-bottom: 25px;
@@ -1205,8 +1212,12 @@
             line-height: 20px;
         }
         &__image-mobile {
-            // margin: auto;
+            margin: 0 auto;
             display: block;
+        }
+        &__button {
+            display: block;
+            margin: 0 auto;
         }
     }
     .advantages {
@@ -1308,9 +1319,6 @@
         padding-top: 75px;
         &__items {
             width: 540px;
-        }
-        &__item {
-            width: 50%;
         }
     }
     .quiz {
@@ -1444,6 +1452,10 @@
                 text-decoration: underline;
             }
         }
+    }
+    .main {
+        background: none;
+        background:  #000 url('../img/main/main-bg-mobile.png') no-repeat top 76px right;
     }
     .promo {
         padding-top: 22px;
@@ -1656,6 +1668,9 @@
         }
     }
     .steps {
+        .container {
+            padding: 0 8px;
+        }
         &__title {
             margin-bottom: 18px;
         }
@@ -1665,20 +1680,23 @@
             row-gap: 20px;
         }
         &__item {
-            width: 200px;
+            width: 293px;
         }
-        &__item--one,
+        &__item--one {
+            background: none;
+            background: url('../img/steps/steps-mobile-one.png') no-repeat left center;
+        }
+        &__item--two {
+            background: none;
+            justify-content: flex-start;
+            background: url('../img/steps/steps-mobile-two.png') no-repeat right center;
+        }
         &__item--three {
-            margin-left: 80px;
+            background: url('../img/steps/steps-mobile-three.png') no-repeat left center;
         }
-        &__item-image--one,
-        &__item-image--three {
-            top: 50%;
-            transform: translateY(-50%);
-            width: 112px;
-        }
-        &__item-image--two {
-            display: none;
+        &__item-content {
+            width: 207px;
+            min-height: 200px;
         } 
         &__item-title {
             font-size: 18px;
@@ -1851,6 +1869,7 @@
             margin-bottom: 25px;
         }
         &__descr {
+            width: 90%;
             font-size: 14px;
             line-height: 17px;
         }

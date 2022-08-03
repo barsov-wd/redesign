@@ -1,8 +1,7 @@
 window.addEventListener('DOMContentLoaded', () => {
     const cards = document.querySelectorAll('.calc__calc-card'),
-        payment = document.querySelector('.calc__calc-sum'),
-        select = document.querySelector('.calc__select'),
-        calcInput = document.querySelector('.calc__calc-input');
+        payment = document.querySelector('.calc__inner-price'),
+        calcInput = document.querySelector('.calc__input');
 
     function prettify(num) {
         var n = num.toString();
@@ -34,7 +33,7 @@ window.addEventListener('DOMContentLoaded', () => {
                 let sum = +calcInput.value.replace(/\D/g, ''),
                     period = +card.dataset.period;
 
-                getPayment(sum, period, 4);
+                getPayment(sum, period, 6.5);
             }
         });
     }
@@ -43,7 +42,7 @@ window.addEventListener('DOMContentLoaded', () => {
         let sum = +document.querySelector('.calc__calc-input').value.replace(/\D/g, ''),
             period = +select.value;
 
-        getPayment(sum, period, 4);
+        getPayment(sum, period, 6.5);
     }
 
     function clearActiveClass() {
@@ -60,42 +59,54 @@ window.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // select.addEventListener('input', () => {
-    //     +calcInput.value.replace(/\D/g, '') >= 100000 && +calcInput.value.replace(/\D/g, '') <= 20000000 ? getPaymentMobile() : payment.textContent = '0';
-    // });
+    calcInput.addEventListener('input', () => {
+        if (calcInput.value[0] == 0) {
+            calcInput.value = calcInput.value.replace(/./g, '');
+        }
+        calcInput.value = calcInput.value.replace(/\D/g, '');
 
-    // calcInput.addEventListener('input', () => {
-    //     if (calcInput.value[0] == 0) {
-    //         calcInput.value = calcInput.value.replace(/./g, '');
-    //     }
-    //     calcInput.value = calcInput.value.replace(/\D/g, '');
+        calcInput.value = prettify(calcInput.value);
+        getPaymentDesktop();
 
-    //     calcInput.value = prettify(calcInput.value);
-    //     getPaymentDesktop();
+        if (+calcInput.value.replace(/\D/g, '') > 20000000) {
+            calcInput.value = prettify(20000000);
+        }
 
-    //     if (+calcInput.value.replace(/\D/g, '') > 20000000) {
-    //         calcInput.value = prettify(20000000);
-    //     }
+        if (+calcInput.value.replace(/\D/g, '') >= 100000 && +calcInput.value.replace(/\D/g, '') <= 20000000) {
+            if (select.value != '') {
+                getPaymentMobile()
+            }
+            getPaymentDesktop();
+        } else {
+            payment.textContent = '0';
+        }
 
-    //     if (+calcInput.value.replace(/\D/g, '') >= 100000 && +calcInput.value.replace(/\D/g, '') <= 20000000) {
-    //         if (select.value != '') {
-    //             getPaymentMobile()
-    //         }
-    //         getPaymentDesktop();
-    //     } else {
-    //         payment.textContent = '0';
-    //     }
-
-    // });
+    });
 
     // Accordion
-    const questions = document.querySelectorAll('.questions__question-header');
+ 
+    function accordion (buttons, buttonActiveClass, contents) {
+        const buttons_ = document.querySelectorAll(buttons);
+        const contents_ = document.querySelectorAll(contents);
 
-    questions.forEach(question => {
-        question.addEventListener('click', () => {
-            question.nextElementSibling.classList.toggle('questions__question-content--active');
+        buttons_.forEach((button, index) => {
+            button.addEventListener('click', () => {
+                button.classList.toggle(buttonActiveClass);
+
+                contents_.forEach((content, index2) => {
+                    if (index == index2) {
+                        if (button.classList.contains(buttonActiveClass)) {
+                            content.style.maxHeight = content.scrollHeight + 'px';
+                        } else {
+                            content.style.maxHeight = '0';
+                        }
+                    }
+                });
+            });
         });
-    });
+    }
+
+    accordion('.questions__question-header', 'questions__question-header--active', '.questions__question-content');
 
     // Menu
 
@@ -116,9 +127,6 @@ window.addEventListener('DOMContentLoaded', () => {
     });
 
     // Slider 
-
-    
-    
 
     new Swiper('.partners-slider',{
         slidesPerView: 1.2,

@@ -13,10 +13,16 @@
         justify-content: space-between;
     }
     &__item {
-        position: relative;
+        width: 383px;
+        min-height: 200px;
+        display: flex;
+        justify-content: flex-end;
+    }
+    &__item-content {
         background-color: #fff;
         width: 283px;
-        padding: 17px 26px 15px 20px;
+        height: 100%;
+        padding: 17px 20px;
     }
     &__item-title--color {
         font-family: 'Roboto Black', sans-serif;
@@ -43,25 +49,13 @@
         line-height: 22px;
         color: #000;
     }
-    &__item-image--one {
-        position: absolute;
-        top: 0;
-        left: -100px;
-        z-index: -1;
+    &__item--one {
+       background: url('../img/steps/steps-image-one.png') no-repeat center left;
     }
-    &__item-image--two {
-        position: absolute;
-        top: 0;
-        left: -80px;
-        z-index: -1;
+    &__item--two {
+        background: url('../img/steps/steps-image-two.png') no-repeat center left;
     }
-    &__item-image--three {
-        position: absolute;
-        top: 0;
-        left: -80px;
-        z-index: -1;
-    }
-    &__image-mobile--two {
-        display: none;
+    &__item--three {
+        background: url('../img/steps/steps-image-three.png') no-repeat center left;
     }
 }
