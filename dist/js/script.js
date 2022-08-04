@@ -24,7 +24,8 @@ window.addEventListener('DOMContentLoaded', () => {
         koef = (i * (Math.pow(1 + i, period * 12))) / (Math.pow(1 + i, period * 12) - 1);
 
         // итог
-        payment.textContent = (sum * koef).toFixed();
+        
+        payment.textContent = (sum * koef).toFixed().replace(/(\d{1,3}(?=(?:\d\d\d)+(?!\d)))/g, "$1" + ' ') + ' ' + '₽';
     };
 
     function getPaymentDesktop() {
@@ -39,8 +40,7 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 
     function getPaymentMobile() {
-        let sum = +document.querySelector('.calc__calc-input').value.replace(/\D/g, ''),
-            period = +select.value;
+        let sum = +document.querySelector('.calc__calc-input').value.replace(/\D/g, '');
 
         getPayment(sum, period, 6.5);
     }
@@ -55,7 +55,7 @@ window.addEventListener('DOMContentLoaded', () => {
         card.addEventListener('click', () => {
             clearActiveClass();
             card.classList.add('calc__calc-card--active'); +
-            calcInput.value.replace(/\D/g, '') >= 100000 && +calcInput.value.replace(/\D/g, '') <= 20000000 ? getPaymentDesktop() : payment.textContent = '0';
+            calcInput.value.replace(/\D/g, '') >= 100000 && +calcInput.value.replace(/\D/g, '') <= 20000000 ? getPaymentDesktop() : payment.textContent = 'от 100 000 ₽';
         });
     });
 
@@ -70,15 +70,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
         if (+calcInput.value.replace(/\D/g, '') > 20000000) {
             calcInput.value = prettify(20000000);
-        }
-
-        if (+calcInput.value.replace(/\D/g, '') >= 100000 && +calcInput.value.replace(/\D/g, '') <= 20000000) {
-            if (select.value != '') {
-                getPaymentMobile()
-            }
-            getPaymentDesktop();
-        } else {
-            payment.textContent = '0';
         }
 
     });
