@@ -979,7 +979,7 @@
         }
     }
     .promo {
-        padding-top: 45px;
+        padding-top: 55px;
         &__title {
             font-size: 32px;
             line-height: 48px;
@@ -1011,6 +1011,7 @@
         }
     }
     .arrange {
+        padding: 75px 0;
         &__inner {
             grid-template-columns: repeat(1,540px);
         }
@@ -1045,7 +1046,7 @@
         }
     }
     .steps {
-        padding-top: 80px;
+        padding-top: 75px;
         &__items {
             width: 750px;
         }
@@ -1066,7 +1067,7 @@
         }
     }
     .benefit {
-        padding-top: 80px;
+        padding-top: 75px;
         &__inner {
             flex-direction: column;
             align-items: center;
@@ -1536,7 +1537,7 @@
             margin-bottom: 20px;
         }
         &__input-group {
-            margin-bottom: 20px;
+            margin-bottom: 30px;
         }
         &__proposal {
             padding: 20px 8px 15px;

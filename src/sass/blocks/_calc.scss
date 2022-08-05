@@ -43,6 +43,12 @@
         left: 20px;
         top: 21px;
     }
+    &__warning {
+        position: absolute;
+		display: none;
+		color: red;
+        bottom: -25px;
+	}
     &__text-time {
         font-size: 18px;
         line-height: 22px;

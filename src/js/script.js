@@ -1,7 +1,11 @@
 window.addEventListener('DOMContentLoaded', () => {
+	const MIN_LOAN_AMOUNT = 100000;
+	const MAX_LOAN_AMOUNT = 20000000;
+
     const cards = document.querySelectorAll('.calc__calc-card'),
         payment = document.querySelector('.calc__inner-price'),
         calcInput = document.querySelector('.calc__input');
+		calcWarning = document.querySelector('.calc__warning');
 
     function prettify(num) {
         var n = num.toString();
@@ -55,7 +59,7 @@ window.addEventListener('DOMContentLoaded', () => {
         card.addEventListener('click', () => {
             clearActiveClass();
             card.classList.add('calc__calc-card--active'); +
-            calcInput.value.replace(/\D/g, '') >= 100000 && +calcInput.value.replace(/\D/g, '') <= 20000000 ? getPaymentDesktop() : payment.textContent = 'от 100 000 ₽';
+            calcInput.value.replace(/\D/g, '') >= MIN_LOAN_AMOUNT && +calcInput.value.replace(/\D/g, '') <= MAX_LOAN_AMOUNT ? getPaymentDesktop() : payment.textContent = '₽';
         });
     });
 
@@ -65,14 +69,23 @@ window.addEventListener('DOMContentLoaded', () => {
         }
         calcInput.value = calcInput.value.replace(/\D/g, '');
 
+		calcInput.dataset.value = calcInput.value;
         calcInput.value = prettify(calcInput.value);
         getPaymentDesktop();
 
-        if (+calcInput.value.replace(/\D/g, '') > 20000000) {
-            calcInput.value = prettify(20000000);
+        if (+calcInput.value.replace(/\D/g, '') > MAX_LOAN_AMOUNT) {
+            calcInput.value = prettify(MAX_LOAN_AMOUNT);
         }
 
     });
+
+	calcInput.addEventListener('focusout', () => {
+		if (parseInt(calcInput.dataset.value) < MIN_LOAN_AMOUNT) {
+			calcWarning.style.display = 'block';
+		} else {
+			calcWarning.style.display = 'none';
+		}
+	});
 
     // Accordion
  
@@ -130,5 +143,3 @@ window.addEventListener('DOMContentLoaded', () => {
     });
 
 });
-
- 
